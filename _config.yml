@@ -1,25 +1,25 @@
-title: Crotal
-subtitle: A static site generator written in Python.
-author: user
+title: Akash
+subtitle: geek | python | linux | vim
+author: Akash
 simple_search: http://google.com/search
-keywords:
-description: A static site generator which is written in Python, super fast, easy to use, and free to all.Start a blog right now using Crotal!
+keywords: python, geek, linux, ubuntu
+description: Working at vaultize
 author_avatar: /images/avatar.gif  # 200*200 is prefered.
 self_description: Hello World! I'm <b>User</b>. Change this text in <code>_config.yml</code> <code>-> self_description</code>.
 
 navbar: [Home: /, Archives: /archives, Categories: /categories, Tags: /tags, About: /about, RSS: /rss.xml]
 
-email:
+email: akash0x53s@gmail.com
 
-deploy_default: rsync
+deploy_default: git
 ip: root@8.8.8.8
 remote_dir: /var/www/html
 
 # If publishing to a subdirectory as in http://site.com/project set 'root: /project'
-root_url: example.com/project
+root_url: akash0x53.github.io/
 permalink: blog/:year/:month/:day/:title
 
-theme: riverside
+theme: floyd
 
 paginate: 5          # Posts per page on the blog index
 pagination_dir: blog  # Directory base for pagination URLs eg. /blog/page/2/
@@ -40,13 +40,13 @@ default_asides: [asides/about.html, asides/recent_post.html]
 weibo_uid:
 
 # Github repositories
-github_user:
-github_repo_count: 0
+github_user: akash0x53
+github_repo_count: 4
 github_show_profile_link: true
 github_skip_forks: true
 
 # Twitter
-twitter_user:
+twitter_user: akash0x53
 twitter_tweet_count: 5
 twitter_tweet_button: true
 
@@ -70,14 +70,14 @@ delicious_count: 3
 comment_system: disqus
 
 # Disqus Comments
-disqus_short_name:
+disqus_short_name: akash0x53
 disqus_show_comment_count: true
 
 # Duoshuo Comments
 duoshuo_short_name:
 
 # Google Analytics
-google_analytics_tracking_id:
+google_analytics_tracking_id: UA-37042212-1
 
 # Clicky
 clicky_tracking_id:
