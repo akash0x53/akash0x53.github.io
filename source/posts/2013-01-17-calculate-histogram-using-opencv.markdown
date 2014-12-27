@@ -12,7 +12,8 @@ Histogram is a handy way of representing whatever it is that you have learned fr
 <h4>Plot Histogram</h4>  
 
 
-```python Histogram.py
+```  
+#Histogram.py
 from numpy.ma.core import ceil  
 import threading  
 import time  
@@ -90,11 +91,10 @@ def HistoThread():
         
 if(__name__=="__main__"):
     cap=cv.CreateCameraCapture(0)
+    threading.Thread(target=HistoThread()).start()
     while(True):
         t0=time.clock()
         frm=cv.QueryFrame(cap)
-        
-        threading.Thread(target=HistoThread()).start()
             
         cv.ShowImage("video",frm)
         t1=time.clock()
@@ -103,8 +103,8 @@ if(__name__=="__main__"):
             break
 ```
 
-{% img /images/histogram/lenna.png 400 %}
-{% img /images/histogram/histo.png 200 %}
+<img src="/images/histogram/lenna.png"/></br>  
+<img src="/images/histogram/histo.png"/>
 
         
         
