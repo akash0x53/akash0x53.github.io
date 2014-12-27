@@ -10,16 +10,16 @@ Segmentation is always a very important and basic task while detecting a particu
 <!--more-->
 Is it sound easy? Yeah! but detecting an object is not an easy task. Light also play crucial role. For example, if you have unidirectional source of light then it creates shadow and different shades of colors on object as you can see in following picture.  
 
-{% img /images/norm/norm.jpg 500 %}  
+<img src="/images/norm/norm.jpg" style="height:500px"/>    
 Intense light from right side of body whiten the right side of body. Detecting skin or Tshirt from this image is not possible as different shades of colors are there. Some part is highlighted and some in shadowed region. If we choose to detect blue T-shirt using RGB value that range varies from (10,80,200) to (10,70,230) (approximate values) then it will not detect the whole T-shirt. It will partially detect T-shirt and this is not what you want.  
 
 So to reduce the effects of light, Normalization of color space is helpful. Normalization removes highlighted regions, shadows and make that object easier to detect.  
 See the following image. Its free from highlighted region, shadow and objects are easily detectable now. For example, human skin, green curtain and Tshirt.
-{% img /images/norm/norm2.jpg 500 %}  
+<img src="/images/norm/norm2.jpg" style="height: 500px"/>    
 
 ####How to convert RGB to Normalized-RGB?  
 Now some mathematical work starts here, following equation convert a pixel to normalized pixel.  
-{% img /images/norm/eq.png 400 %}
+<img src="/images/norm/eq.png" style="height: 400px"/>  
 
 #####Explaination:  
 let R,G,B are pixel values,  
@@ -39,7 +39,7 @@ now,
 then new pixel value is (56,113,85) respective to RGB.  
 
 
-######Why scaling factor is required?  
+####Why scaling factor require?  
 In previous example, division results in floating point value that is less than 1.00. Division value 0.22 which then rounded of to 0 that means black color. To avoid this, it must be multiplied by some value.  
 
 
