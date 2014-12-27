@@ -103,8 +103,8 @@ if(__name__=="__main__"):
             break
 ```
 
-<img src="/images/histogram/lenna.png"/></br>  
-<img src="/images/histogram/histo.png"/>
+<img src="/images/histogram/lenna.png" style="height: 350px"/></br>  
+<img src="/images/histogram/histo.png" style="height: 200px"/>
 
         
         
