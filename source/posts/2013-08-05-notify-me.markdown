@@ -1,0 +1,15 @@
+---
+layout: post
+title: "notify-me"
+date: 2013-08-05 11:38
+comments: true
+categories: python projects
+---
+
+"Notify-Me" a simple notifier! <!--more-->
+
+I was frequently visiting university website for result. I belonged to University of Pune which has no fixed schedule for declaration of result at all. But i was tired of this! Also website doesn't have RSS feed facility. So I decided to write a small app that could periodically extract the webpage, check for changes any made, if yes then it send me a SMS via [FullonSMS](http://www.fullonsms.com). ;)   
+
+I didn't want to waste my electricity and bandwidth for this app, so i deployed it on [Heroku.com](http://www.heroku.com), and it worked. "notify-me" had given notification at 00:30AM!
+
+This application is at the initial stages. You can fork it from [here](https://github.com/akash0x53/notify-me). Pull requests are most welcome.

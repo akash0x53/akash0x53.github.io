@@ -1,0 +1,26 @@
+---
+layout: post
+title: "Slise"
+date: 2013-09-22 00:26
+comments: true
+categories: [python, project]
+---
+
+####SLISE = Simple Local Image Search Engine <!--more-->
+<blockquote>
+Simple image searching tool, search images based on image histogram and other features of image.
+</blockquote>
+
+### Dependencies  
+  * Python 2.7  
+  * OpenCV 2.4.3 (or OpenCV 2.4.x)
+  * Gtk3 for Python 
+  * Glade 3.18
+  * numpy 1.6.2
+
+### Screen-shots/How to use?  
+<img src="/images/slise/1.png" style="height: 400px"/></br>
+<img src="/images/slise/2.png" style="height: 400px"/>
+
+[Download and contribute](https://github.com/akash0x53/slise). Suggestions are welcome.
+

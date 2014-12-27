@@ -1,0 +1,15 @@
+---
+layout: post
+title: "Project report using Latex"
+date: 2013-04-26 11:02
+comments: true
+categories: latex
+---
+
+Hello friends, this post is about LaTeX report. Recently i submitted my final year project report to college. Instead of using M$ word i tried LaTeX.<!--more--> Believe me guys LaTeX (latex) is fun! Though it took me almost 20 days to finalize the documentation, but it was fun, quality was good and it looks professional.  
+
+I'm aslo latex beginner, but i managed to do lots of things in LaTeX like drawing UML diagrams, block diagrams, customizing page and much more. I have made my project template available for you guys as reference, you can fork, download it from [here](https://github.com/akash0x53/report_latex).  
+
+Download and install latest Latex version, install packages mentioned in README section.
+
+
