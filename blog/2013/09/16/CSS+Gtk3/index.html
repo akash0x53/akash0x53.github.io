@@ -1,0 +1,178 @@
+<link href='http://fonts.googleapis.com/css?family=Hammersmith+One' rel='stylesheet' type='text/css'>
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8" /><title>CSS+Gtk3 | Akash</title>
+<meta name="author" content="Akash">
+<meta name="description" content="Remix GTK3 Apps with the magical CSS I assumed you know Gtk2 and write Gtk apps in any language, I show you how to theme your GTK3 apps. Please note CSS support is available for Gtk3 and not for Gtk2. First of all create a window which have some widget ...">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta property="og:site_name" content="">
+<!--<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" type="text/css" />-->
+<link rel="stylesheet" href="/css/bootstrap.css" type="text/css">
+<link rel="stylesheet" href="/css/blog.css" type="text/css">
+<link rel="stylesheet" href="/css/pygments.css" type="text/css">
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <script async="" type="text/javascript" src="//akash0x53.disqus.com/count.js"></script>
+
+</head><header class="navbar navbar-default topnav" role="banner">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/" id="logo">Akash</a>
+        </div>
+        <div class="collapse navbar-collapse" id="navigation">
+            <ul class="nav navbar-nav navbar-right " id="nav">
+                                                                <li><a class="blog-nav-item" href="/">Home</a></li>
+                                                                                                <li><a class="blog-nav-item" href="/archives">Archives</a></li>
+                                                                                                <li><a class="blog-nav-item" href="/categories">Categories</a></li>
+                                                                                                <li><a class="blog-nav-item" href="/tags">Tags</a></li>
+                                                                                                <li><a class="blog-nav-item" href="/about">About</a></li>
+                                                                                                <li><a class="blog-nav-item" href="/rss.xml">RSS</a></li>
+                                                            </ul>
+        </div>
+    </div>
+</header><body>
+<div class="container innerpage_content">
+    <div class="blog-header"><div class="blog-header">
+    <div class="title">
+        <h1 style="font-family: 30px;">Akash</h1>
+        <hr class="new">
+        <p>Indian geek pythonista <3 vim & Linux.</p>
+    </div>
+</div></div>
+    <div class="row">
+<div class="col-sm-9 blog-main">
+    <hr/>
+    <div class="blog-post">
+        <h2 class="blog-post-title">CSS+Gtk3</h2>
+        <p class="blog-post-meta">Sep 16, 2013 by <i>Akash</i></p>
+        <p>Remix GTK3 Apps with the magical CSS  <!--more--></p>
+<p>I assumed you know Gtk2 and write Gtk apps in any language, I show you how to  theme your GTK3 apps. Please note CSS support is available for Gtk3 and not for Gtk2.  </p>
+<p>First of all create a window which have some widget on it. In my case I add GtkLabel.  </p>
+<div class="codehilite"><pre><span class="cp">#Example Window</span>
+
+<span class="n">import</span> <span class="n">gi</span><span class="p">.</span><span class="n">repository</span> <span class="n">Gtk</span><span class="p">,</span> <span class="n">Gdk</span>
+
+<span class="n">win</span><span class="o">=</span><span class="n">Gtk</span><span class="p">.</span><span class="n">Window</span><span class="p">()</span>
+<span class="n">lbl</span><span class="o">=</span><span class="n">Gtk</span><span class="p">.</span><span class="n">Label</span><span class="p">(</span><span class="s">&quot;Hello&quot;</span><span class="p">)</span>
+<span class="n">lbl</span><span class="p">.</span><span class="n">set_name</span><span class="p">(</span><span class="err">&#39;</span><span class="n">mylabel</span><span class="err">&#39;</span><span class="p">)</span> <span class="err">#</span><span class="n">use</span> <span class="n">as</span> <span class="n">CSS</span> <span class="n">selector</span> <span class="n">i</span><span class="p">.</span><span class="n">e</span> <span class="err">#</span><span class="n">mylabel</span>
+
+<span class="n">win</span><span class="p">.</span><span class="n">set_size_request</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span>
+<span class="n">win</span><span class="p">.</span><span class="n">connect</span><span class="p">(</span><span class="err">&#39;</span><span class="n">delete</span><span class="o">-</span><span class="n">event</span><span class="err">&#39;</span><span class="p">,</span><span class="n">close</span><span class="p">)</span>
+<span class="n">win</span><span class="p">.</span><span class="n">add</span><span class="p">(</span><span class="n">lbl</span><span class="p">)</span>
+
+<span class="n">win</span><span class="p">.</span><span class="n">show_all</span><span class="p">()</span>
+<span class="n">Gtk</span><span class="p">.</span><span class="n">main</span><span class="p">()</span>
+
+
+<span class="n">def</span> <span class="n">close</span><span class="p">(</span><span class="n">event</span><span class="p">,</span><span class="n">data</span><span class="p">)</span><span class="o">:</span>
+    <span class="n">Gtk</span><span class="p">.</span><span class="n">main_quit</span><span class="p">()</span>
+</pre></div>
+
+
+<p>Then add CSS using <code>GtkStyleContext</code> and <code>GtkCssProvider</code> these classes allows to import <code>css</code> file or embed css code in app. So first create a css that apply color to label.</p>
+<div class="codehilite"><pre><span class="cp">#mylabel{</span>
+    <span class="nl">color:</span> <span class="err">#</span><span class="n">FF0000</span><span class="p">;</span>
+
+<span class="p">}</span>
+</pre></div>
+
+
+<p>Instead of <code>mylabel</code> you can use widget name i.e <code>GtkLabel</code>. Now its time to attach CSS to GTK apps.</p>
+<div class="codehilite"><pre><span class="n">style</span><span class="o">=</span><span class="n">Gtk</span><span class="p">.</span><span class="n">CssProvider</span><span class="p">()</span>
+<span class="n">style</span><span class="p">.</span><span class="n">load_from_path</span><span class="p">(</span><span class="err">&#39;</span><span class="p">.</span><span class="o">/</span><span class="n">style</span><span class="p">.</span><span class="n">css</span><span class="err">&#39;</span><span class="p">)</span>
+<span class="n">Gtk</span><span class="p">.</span><span class="n">StyleContext</span><span class="p">.</span><span class="n">add_provider_for_screen</span><span class="p">(</span><span class="n">Gdk</span><span class="p">.</span><span class="n">Screen</span><span class="p">.</span><span class="n">get_default</span><span class="p">(),</span><span class="n">style</span><span class="p">,</span><span class="n">Gtk</span><span class="p">.</span><span class="n">STYLE_PROVIDER_PRIORITY_APPLICATION</span><span class="p">)</span>
+</pre></div>
+
+
+<p>and thats it.  </p>
+<h3>Result</h3>
+<p><img src="/images/css_gtk/gtk-css.png" style="height: 200px"/></p>
+    </div>
+
+            <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            /* * * siteURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'akash0x53'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+         dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+         })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>    
+</div>
+
+<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 right">
+            <hr/>
+        <div class="widget">
+    <h4 class="widgettitle">About</h4>
+    <div class="description">
+        <p>Python Developer who hates WhatsApp and loves Open Source. Security enthusiast.</br> I believe "Talk is cheap, when it comes to coding".</p>
+    </div>
+</div>            <hr/>
+        <div class="widget recent_posts">
+    <h4 class="widgettitle">Recent Posts</h4>
+    <ul>
+                <li><a href="/blog/2014/09/02/Configure-DNS-on-Ubuntu/">Configure DNS on Ubuntu</a></li>
+                <li><a href="/blog/2014/05/31/DIY-Ubuntu-Tshirt/">DIY Ubuntu Tshirt</a></li>
+                <li><a href="/blog/2014/05/12/Copy-Images-from-Quora/">Copy Images from Quora</a></li>
+                <li><a href="/blog/2013/09/22/Slise/">Slise</a></li>
+                <li><a href="/blog/2013/09/16/CSS+Gtk3/">CSS+Gtk3</a></li>
+            </ul>
+</div>            <hr/>
+        <div class="widget">
+<h4 class="widgettitle">Contacts</h4>
+<ul>
+	
+
+	 <li><a class="social google" href='mailto:akash0x53s@gmail.com' target="_blank">Gmail</a></li> 		<li><a class="social twitter" href='https://twitter.com/akash0x53' target="_blank" >Twitter</a></li>	<li><a class="social github" href='https://github.com/akash0x53' target="_blank"      >Github</a></li>		</ul>
+</div>    </div></div>
+</div>
+
+<div class="blog-footer">
+        <p id="copyright">&copy; 2013 <a href="/" title="">Akash</a> | Powered by <a href="http://crotal.org" target="_blank">Crotal</a></p>
+      <p>
+        <a href="#">Back to top</a>
+      </p>
+    </div>
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+<script type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-37042212-1']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+
+
+</body>
+</html>
