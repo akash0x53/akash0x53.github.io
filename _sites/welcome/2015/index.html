@@ -1,0 +1,116 @@
+<link href='http://fonts.googleapis.com/css?family=Hammersmith+One' rel='stylesheet' type='text/css'>
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8" /><title>bye-2014 | Akash</title>
+<meta name="author" content="Akash">
+<meta name="description" content="time remain to 2015">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta property="og:site_name" content="">
+<!--<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" type="text/css" />-->
+<link rel="stylesheet" href="/css/bootstrap.css" type="text/css">
+<link rel="stylesheet" href="/css/blog.css" type="text/css">
+<link rel="stylesheet" href="/css/pygments.css" type="text/css">
+<script src="/js/countdown.min.js"></script>
+
+<style>
+	h1, h2, h4 {
+		color: #ffffff;
+		font-family: "monospace";
+	}
+
+	h1 {
+		font-size: 120px;
+	}
+
+	h2 { 
+		font-size: 40px;
+	}
+
+</style>
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <script async="" type="text/javascript" src="//akash0x53.disqus.com/count.js"></script>
+
+</head><header class="navbar navbar-default topnav" role="banner">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/" id="logo">Akash</a>
+        </div>
+        <div class="collapse navbar-collapse" id="navigation">
+            <ul class="nav navbar-nav navbar-right " id="nav">
+			<li><a class="blog-nav-item" href="/">Home</a></li>
+			<li><a class="blog-nav-item" href="/archives">Archives</a></li>
+			<li><a class="blog-nav-item" href="/categories">Categories</a></li>
+			<li><a class="blog-nav-item" href="/tags">Tags</a></li>
+			<li><a class="blog-nav-item" href="/about">About</a></li>
+			<li><a class="blog-nav-item" href="/rss.xml">RSS</a></li>
+		</ul>
+        </div>
+    </div>
+	</header>
+	
+	<body>
+		<div id="canvas" class="container innerpage_content" style="width:auto; height:100%; text-align:center">
+			<h4 style="padding-bottom: 1em">Do something awesome in</h4>
+
+			<h1 id="counter">
+			</h1></br></br>
+			<h2 id="hashval"></h2>
+	</div>
+<div class="blog-footer">
+        <p id="copyright">&copy; 2013 <a href="/" title="">Akash</a> | Powered by <a href="http://crotal.org" target="_blank">Crotal</a></p>
+      <p>
+        <a href="#">Back to top</a>
+      </p>
+    </div>
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+<script type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-37042212-1']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+
+	setInterval(function(){
+			var board=document.getElementById("counter");
+			var hash_val = document.getElementById("hashval");
+			var container = document.getElementById("canvas");
+			ct = countdown("2015");
+			board.innerHTML = ct.hours + ":" + ct.minutes + ":" + ct.seconds;
+			color = "#" + ct.hours + ct.minutes + ct.seconds;
+			hash_val.innerHTML = color
+			container.style.backgroundColor=color;
+			
+	}, 1000);
+</script>
+
+
+</body>
+</html>
