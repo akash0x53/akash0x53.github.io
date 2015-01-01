@@ -2,9 +2,9 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-<meta charset="UTF-8" /><title>bye-2014 | Akash</title>
+<meta charset="UTF-8" /><title>What Color is it Now! | Akash</title>
 <meta name="author" content="Akash">
-<meta name="description" content="time remain to 2015">
+<meta name="description" content="what color is it now">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <meta property="og:site_name" content="">
 <!--<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" type="text/css" />-->
@@ -64,7 +64,6 @@
 	
 	<body>
 		<div id="canvas" class="container innerpage_content" style="width:auto; height:100%; text-align:center">
-			<h4 style="padding-bottom: 1em">Do something awesome in</h4>
 
 			<h1 id="counter">
 			</h1></br></br>
@@ -98,13 +97,13 @@ _gaq.push(['_trackPageview']);
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 })();
 
+	board=document.getElementById("counter");
+	hash_val = document.getElementById("hashval");
+	container = document.getElementById("canvas");
 	setInterval(function(){
-			var board=document.getElementById("counter");
-			var hash_val = document.getElementById("hashval");
-			var container = document.getElementById("canvas");
-			ct = countdown("2015");
-			board.innerHTML = ct.hours + ":" + ct.minutes + ":" + ct.seconds;
-			color = "#" + ct.hours + ct.minutes + ct.seconds;
+			ct = new Date();
+			board.innerHTML = ct.getHours() + ":" + ct.getMinutes + ":" + ct.getSeconds();
+			color = "#" + ct.getHours() + ct.getMinutes + ct.getSeconds();
 			hash_val.innerHTML = color
 			container.style.backgroundColor=color;
 			
