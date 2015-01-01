@@ -101,9 +101,9 @@ _gaq.push(['_trackPageview']);
 	hash_val = document.getElementById("hashval");
 	container = document.getElementById("canvas");
 	setInterval(function(){
-			ct = new Date();
-			board.innerHTML = ct.getHours() + ":" + ct.getMinutes + ":" + ct.getSeconds();
-			color = "#" + ct.getHours() + ct.getMinutes + ct.getSeconds();
+			var ct = new Date();
+			board.innerHTML = ct.getHours() + ":" + ct.getMinutes() + ":" + ct.getSeconds();
+			color = "#" + ct.getHours() + ct.getMinutes() + ct.getSeconds();
 			hash_val.innerHTML = color
 			container.style.backgroundColor=color;
 			
