@@ -2,7 +2,7 @@
 title: "what-color-is-it-now?"
 date: 2015-01-01 22:29
 categories:
-slug: what-color-is-it-now?
+slug: what-color-is-it-now
 ---
 
 Shamelessly replicating [What Color...](http://whatcolourisit.scn9a.org/)  
