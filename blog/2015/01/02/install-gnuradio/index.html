@@ -2,9 +2,9 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-<meta charset="UTF-8" /><title>Tags | Akash</title>
+<meta charset="UTF-8" /><title>install-GNUradio | Akash</title>
 <meta name="author" content="Akash">
-<meta name="description" content="">
+<meta name="description" content="Here are the ways to install GNURadio on your Ubuntu machine 1. Using source (git, tar) Get source git clone http://git.gnuradio.org/git/gnuradio.git or get weekly tarballs from here. Check dependencies Here And build GnuRadio $ mkdir build $ cd build $ ...">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <meta property="og:site_name" content="">
 <!--<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" type="text/css" />-->
@@ -53,15 +53,68 @@
     </div>
 </div></div>
     <div class="row">
-<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 blog-main">
-    <h3 class="main-title">Tag Cloud</h3>
-    <hr>
-    <ul class="tags">
-            </ul>
+<div class="col-sm-9 blog-main">
+    <hr/>
+    <div class="blog-post">
+        <h2 class="blog-post-title">install-GNUradio</h2>
+        <p class="blog-post-meta">Jan 02, 2015 by <i>Akash</i></p>
+        <p>Here are the ways to install GNURadio on your Ubuntu machine<br />
+<!--more-->  </p>
+<h5>1. Using source (git, tar)</h5>
+<ul>
+<li>
+<p>Get source <code>git clone http://git.gnuradio.org/git/gnuradio.git</code><br />
+or get weekly tarballs from <a href="http://jenkins.gnuradio.org/builds/gnuradio-current.tar.gz">here.</a>  </p>
+</li>
+<li>
+<p>Check dependencies <a href="http://gnuradio.org/doc/doxygen/build_guide.html">Here</a></p>
+</li>
+<li>And build GnuRadio   </li>
+</ul>
+<div class="codehilite"><pre><span class="err">$</span> <span class="n">mkdir</span> <span class="n">build</span>  
+<span class="err">$</span> <span class="n">cd</span> <span class="n">build</span>  
+<span class="err">$</span> <span class="n">cmake</span> <span class="p">..</span><span class="o">/</span>  
+<span class="err">$</span> <span class="n">make</span>  
+<span class="err">$</span> <span class="n">sudo</span> <span class="n">make</span> <span class="n">install</span>  
+</pre></div>
+
+
+<h5>2. Using GnuRadio build script</h5>
+<ul>
+<li>
+<p>The script check dependencies and download if not met any. So just download and 
+  execute the script.</p>
+</li>
+<li>
+<p>Download build script from <a href="http://www.sbrac.org/files/build-gnuradio">here</a>. </p>
+</li>
+<li>Make it executable, i.e <code>chmod +x build-gnuradio</code>  </li>
+<li>and run it, <code>./build-gnuradio</code></li>
+</ul>
+<h5>3. Using PPA</h5>
+<ul>
+<li>This is easiest way to install GnuRadio, gqrx, rtl-sdr, and many related tools  </li>
+<li>Add PPA, <code>$ sudo apt-add-repository ppa:gqrx-releases</code>  </li>
+<li>Update repo   </li>
+<li>and install GnuRadio <code>sudo apt-get install gnuradio</code>  </li>
+</ul>
+    </div>
+
+            <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            /* * * siteURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'akash0x53'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+         dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+         })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>    
 </div>
 
-<div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
-    </div>
 <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 right">
             <hr/>
         <div class="widget">
