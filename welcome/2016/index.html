@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-<meta charset="UTF-8" /><title>What time is it now? | Akash</title>
+<meta charset="UTF-8" /><title>Do Something Awesome | Akash</title>
 <meta name="author" content="Akash">
 <meta name="description" content="time==color">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -100,7 +100,7 @@ _gaq.push(['_trackPageview']);
 	hash_val = document.getElementById("hashval");
 	container = document.getElementById("canvas");
 	setInterval(function(){
-			ct = new Date()
+			ct = countdown("2016");
 			board.innerHTML = ct.getHours() + ":" + ct.getMinutes() + ":" + ct.getSeconds();
 			color = "#" + ct.getHours() + ct.getMinutes() + ct.getSeconds();
 			hash_val.innerHTML = color;
