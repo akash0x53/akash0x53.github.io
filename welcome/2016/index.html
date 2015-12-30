@@ -105,7 +105,7 @@ _gaq.push(['_trackPageview']);
 			color = "#" + new Intl.NumberFormat("en-US", {minimumIntegerDigits:2}).format((ct.days*24+ct.hours));
 			color += new Intl.NumberFormat("en-US", {minimumIntegerDigits:2}).format(ct.minutes);
 		    color += new Intl.NumberFormat("en-US", {minimumIntegerDigits:2}).format(ct.seconds);
-			hash_val.innerHTML = board.innerHTML;
+			hash_val.innerHTML = color;
 			container.style.backgroundColor=color;
 			
 	}, 1000);
