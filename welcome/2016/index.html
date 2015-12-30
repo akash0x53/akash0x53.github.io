@@ -101,7 +101,7 @@ _gaq.push(['_trackPageview']);
 	container = document.getElementById("canvas");
 	setInterval(function(){
 			ct = countdown("2016");
-			board.innerHTML = ct.hours + ":" + ct.minutes + ":" + ct.seconds;
+			board.innerHTML = (ct.days*24+ct.hours) + ":" + ct.minutes + ":" + ct.seconds;
 			color = "#" + (ct.days*24+ct.hours) + ct.minutes + ct.seconds;
 			hash_val.innerHTML = color;
 			container.style.backgroundColor=color;
