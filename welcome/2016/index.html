@@ -102,8 +102,10 @@ _gaq.push(['_trackPageview']);
 	setInterval(function(){
 			ct = countdown("2016");
 			board.innerHTML = (ct.days*24+ct.hours) + ":" + ct.minutes + ":" + ct.seconds;
-			color = "#" + (ct.days*24+ct.hours) + ct.minutes + ct.seconds;
-			hash_val.innerHTML = color;
+			color = "#" + new Intl.NumberFormat("en-US", {minimumIntegerDigits:2}).format((ct.days*24+ct.hours));
+			color += new Intl.NumberFormat("en-US", {minimumIntegerDigits:2}).format(ct.minutes);
+		    color += new Intl.NumberFormat("en-US", {minimumIntegerDigits:2}).format(ct.seconds);
+			hash_val.innerHTML = board.innerHTML;
 			container.style.backgroundColor=color;
 			
 	}, 1000);
