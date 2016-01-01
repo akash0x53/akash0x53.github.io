@@ -100,11 +100,16 @@ _gaq.push(['_trackPageview']);
 	hash_val = document.getElementById("hashval");
 	container = document.getElementById("canvas");
 	setInterval(function(){
-			ct = countdown(new Date(2016,1,1));
-			board.innerHTML = (ct.days*24+ct.hours) + ":" + ct.minutes + ":" + ct.seconds;
-			color = "#" + new Intl.NumberFormat("en-US", {minimumIntegerDigits:2}).format((ct.days*24+ct.hours));
-			color += new Intl.NumberFormat("en-US", {minimumIntegerDigits:2}).format(ct.minutes);
-		    color += new Intl.NumberFormat("en-US", {minimumIntegerDigits:2}).format(ct.seconds);
+			//ct = countdown(new Date(2016,1,1));
+			ct = new Date()
+			hours = ct.getHours();
+			mins = ct.getMinutes();
+			sec = ct.getSeconds()
+
+			board.innerHTML = hours + ":" + mins + ":" + sec;
+			color = "#" + new Intl.NumberFormat("en-US", {minimumIntegerDigits:2}).format((hours));
+			color += new Intl.NumberFormat("en-US", {minimumIntegerDigits:2}).format(mins);
+		    color += new Intl.NumberFormat("en-US", {minimumIntegerDigits:2}).format(sec);
 			hash_val.innerHTML = color;
 			container.style.backgroundColor=color;
 			
